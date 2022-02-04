@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 7288f36c5aecc7f4ea7cc9003c7a3d33
+guid: 35223129206e70846b5b9e739764425b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5016800023942015794
-    second: blueGuy_0
+      213: 2992464411405417641
+    second: coolGuy_0
   - first:
-      213: 2897864994493270489
-    second: blueGuy_1
+      213: -4179872095471597761
+    second: coolGuy_1
   - first:
-      213: 452484380795413661
-    second: blueGuy_2
+      213: 3249386893282269162
+    second: coolGuy_2
   - first:
-      213: 4843688250151194621
-    second: blueGuy_3
-  - first:
-      213: -3222909990529842824
-    second: blueGuy_4
-  - first:
-      213: 2834436578208483477
-    second: blueGuy_5
+      213: -8005595848351519809
+    second: coolGuy_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -64,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -86,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,127 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blueGuy_0
+      name: coolGuy_0
       rect:
         serializedVersion: 2
-        x: 297
-        y: 647
-        width: 433
-        height: 335
+        x: 168
+        y: 399
+        width: 730
+        height: 602
       alignment: 9
-      pivot: {x: 0.5, y: 0.01}
+      pivot: {x: 0.49170968, y: 0.045093928}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23b2c38aa014f9540800000000000000
-      internalID: 5016800023942015794
+      spriteID: 9ac71d4078e578920800000000000000
+      internalID: 2992464411405417641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blueGuy_1
+      name: coolGuy_1
       rect:
         serializedVersion: 2
-        x: 27
-        y: 249
-        width: 287
-        height: 327
+        x: 193
+        y: 60
+        width: 102
+        height: 116
       alignment: 9
-      pivot: {x: 0.9395565, y: 0.9179374}
+      pivot: {x: 0.5000005, y: 0.8521638}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d98fc3ebd8473820800000000000000
-      internalID: 2897864994493270489
+      spriteID: f3709de997c1ef5c0800000000000000
+      internalID: -4179872095471597761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blueGuy_2
+      name: coolGuy_2
       rect:
         serializedVersion: 2
-        x: 341
-        y: 248
-        width: 354
-        height: 336
+        x: 354
+        y: 60
+        width: 324
+        height: 315
       alignment: 9
-      pivot: {x: 0.5042425, y: 0.057500113}
+      pivot: {x: 0.4906605, y: 0.0965326}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9429bf952c874600800000000000000
-      internalID: 452484380795413661
+      spriteID: ae756e7d924281d20800000000000000
+      internalID: 3249386893282269162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blueGuy_3
+      name: coolGuy_3
       rect:
         serializedVersion: 2
-        x: 742
-        y: 289
-        width: 225
-        height: 294
+        x: 738
+        y: 75
+        width: 102
+        height: 116
       alignment: 9
-      pivot: {x: 0.08616564, y: 0.91376626}
+      pivot: {x: 0.5000006, y: 0.8130345}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dffcef0fccc383340800000000000000
-      internalID: 4843688250151194621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blueGuy_4
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 8
-        width: 103
-        height: 241
-      alignment: 9
-      pivot: {x: 0.48541912, y: 0.9736024}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8714967707ce543d0800000000000000
-      internalID: -3222909990529842824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blueGuy_5
-      rect:
-        serializedVersion: 2
-        x: 726
-        y: 12
-        width: 103
-        height: 241
-      alignment: 9
-      pivot: {x: 0.5, y: 0.97360253}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5988d76ec01f55720800000000000000
-      internalID: 2834436578208483477
+      spriteID: fbb6aabcdf866e090800000000000000
+      internalID: -8005595848351519809
       vertices: []
       indices: 
       edges: []
