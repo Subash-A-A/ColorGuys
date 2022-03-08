@@ -5,7 +5,9 @@ using UnityEngine;
 public class AimWeapon : MonoBehaviour
 {
     [SerializeField] private Transform aimTransform;
+    [SerializeField] private Transform player;
     [SerializeField] private Camera cam;
+    [SerializeField] private float playerScaleMagnitude = 0.2f;
 
     private void Update()
     {
@@ -16,17 +18,23 @@ public class AimWeapon : MonoBehaviour
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
 
         Vector3 localScale = Vector3.one;
+        Vector3 playerLocalScale = new Vector3(playerScaleMagnitude, playerScaleMagnitude, playerScaleMagnitude);
 
         if (angle > 90f || angle < -90f)
         {
-            localScale.y = -1f;
+            playerLocalScale.x = -playerScaleMagnitude;
+            localScale = Vector3.one * -1f;
+            localScale.z = 1;
         }
         else
         {
-            localScale.y = 1f;
+            playerLocalScale.x = playerScaleMagnitude;
+            localScale = Vector3.one;
+            localScale.z = 1;
         }
 
-        transform.localScale = Vector3.Lerp(transform.localScale, localScale, 25f * Time.deltaTime);
+        player.transform.localScale = playerLocalScale;
+        transform.localScale = localScale;
     }
 
     private Vector3 GetMouseWorldPosition()
