@@ -8,11 +8,12 @@ public class AimWeapon : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Camera cam;
     [SerializeField] private float playerScaleMagnitude = 0.2f;
+    public Vector3 aimDirection;
 
     private void Update()
     {
         Vector3 mousePosition = GetMouseWorldPosition();
-        Vector3 aimDirection = (mousePosition - transform.position).normalized;
+        aimDirection = (mousePosition - transform.position).normalized;
 
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
