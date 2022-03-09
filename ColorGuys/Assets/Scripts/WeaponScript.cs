@@ -5,14 +5,27 @@ using UnityEngine;
 public class WeaponScript : MonoBehaviour
 {
     [SerializeField] Transform AttackPoint;
-    [SerializeField] GameObject BulletPrefab;
-    [SerializeField] KeyCode ShootKey;
+    [SerializeField] KeyCode ShootKey = KeyCode.Mouse0;
+    [SerializeField] GameObject Bullet;
+    [SerializeField] float bulletSpeed = 12f;
+    [SerializeField] LayerMask Shootable;
+
+    [SerializeField] bool FullAuto = false;
+
+    private AimWeapon aimWeapon;
 
     private void Update()
     {
-        if (Input.GetKey(ShootKey))
+        if (FullAuto ? (Input.GetKey(ShootKey)) : (Input.GetKeyDown(ShootKey)))
         {
-            Instantiate(BulletPrefab, AttackPoint.position, Quaternion.identity);
+            Shoot();
         }
+    }
+
+    public void Shoot()
+    {
+        GameObject currentBullet = Instantiate(Bullet, AttackPoint.position, Quaternion.identity);
+        Rigidbody2D bulletRb = currentBullet.GetComponent<Rigidbody2D>();
+        bulletRb.velocity = AttackPoint.right * bulletSpeed;
     }
 }

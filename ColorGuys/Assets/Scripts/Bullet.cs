@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float force = 2f;
-    [SerializeField] Rigidbody2D rb;
-
-    private void FixedUpdate()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        rb.AddForce(Vector2.right * force);
+        if (other.transform.tag == "Target")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
