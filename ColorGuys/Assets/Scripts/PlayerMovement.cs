@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] Animator anim;
+    [SerializeField] KeyCode DanceKey = KeyCode.T;
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -28,6 +29,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+
+        // Dance
+
+        if (Input.GetKey(DanceKey))
+        {
+            anim.SetBool("isDancing", true);
+        }
+        else
+        {
+            anim.SetBool("isDancing", false);
+        }
+
         if (movement.x != 0 || movement.y != 0)
         {
             anim.SetBool("isRunning", true);
