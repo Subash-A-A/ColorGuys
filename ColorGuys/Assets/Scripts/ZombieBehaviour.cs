@@ -37,7 +37,7 @@ public class ZombieBehaviour : MonoBehaviour
     {
         Vector3 zombLocalScale = new Vector3(initialScale, initialScale, initialScale);
 
-        if (target.position.x < transform.position.x)
+        if (target.position.x < transform.position.x && isChasing)
         {
             zombLocalScale.x = -initialScale;
         }
