@@ -35,7 +35,7 @@ public class AimWeapon : MonoBehaviour
         }
 
         player.transform.localScale = playerLocalScale;
-        transform.localScale = localScale;
+        transform.localScale = Vector3.Lerp(transform.localScale, localScale, 50 * Time.deltaTime);
     }
 
     private Vector3 GetMouseWorldPosition()
