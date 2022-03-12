@@ -1498,7 +1498,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e84867334d1fa3249bee24a4eb5ba414, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   Shootable:
     serializedVersion: 2
     m_Bits: 64
-  FullAuto: 0
+  FullAuto: 1
 --- !u!1 &2142791438
 GameObject:
   m_ObjectHideFlags: 0

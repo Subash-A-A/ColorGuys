@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
+    private bool isDancing;
 
     private void Awake()
     {
+        isDancing = false;
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -32,17 +35,22 @@ public class PlayerMovement : MonoBehaviour
 
         // Dance
 
-        if (Input.GetKey(DanceKey))
+        if (Input.GetKey(DanceKey) && !isDancing)
         {
             anim.SetBool("isDancing", true);
+            isDancing = true;
         }
         else
         {
             anim.SetBool("isDancing", false);
+            isDancing = false;
         }
 
         if (movement.x != 0 || movement.y != 0)
         {
+            anim.SetBool("isDancing", false);
+            isDancing = false;
+
             anim.SetBool("isRunning", true);
         }
         else
