@@ -29,6 +29,10 @@ public class ZombieBehaviour : MonoBehaviour
         else
         {
             isChasing = false;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+            // Smoothly reduces velocity to 0 if not chasing.
+            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, 25 * Time.deltaTime);
         }
         anim.SetBool("isChasing", isChasing);
     }

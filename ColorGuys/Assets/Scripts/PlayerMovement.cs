@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             isDancing = false;
         }
 
+        // Running 
         if (movement.x != 0 || movement.y != 0)
         {
             anim.SetBool("isDancing", false);
@@ -57,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+
+        // Moving Player
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
