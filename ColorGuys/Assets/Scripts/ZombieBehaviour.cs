@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieBehaviour : MonoBehaviour
 {
     [SerializeField] Transform target;
+    [SerializeField] Transform zombie;
     [SerializeField] float speed = 1.5f;
     [SerializeField] float range = 12f;
-    [SerializeField] float initialScale = 0.25f;
+    [SerializeField] float initialScale = 1f;
     [SerializeField] Animator anim;
 
     private bool isChasing = false;
@@ -50,6 +49,6 @@ public class ZombieBehaviour : MonoBehaviour
             zombLocalScale.x = initialScale;
         }
 
-        transform.localScale = Vector3.Lerp(transform.localScale, zombLocalScale, 70 * Time.deltaTime);
+        zombie.localScale = zombLocalScale;
     }
 }

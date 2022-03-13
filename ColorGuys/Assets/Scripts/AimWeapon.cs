@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AimWeapon : MonoBehaviour
@@ -35,7 +33,7 @@ public class AimWeapon : MonoBehaviour
         }
 
         player.transform.localScale = playerLocalScale;
-        transform.localScale = Vector3.Lerp(transform.localScale, localScale, 50 * Time.deltaTime);
+        transform.localScale = localScale;
     }
 
     private Vector3 GetMouseWorldPosition()
