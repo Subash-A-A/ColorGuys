@@ -9,8 +9,8 @@ public class Bullet : MonoBehaviour
         if (other.transform.tag == "Target")
         {
             Destroy(gameObject);
-            ZombieHealth zh = other.transform.gameObject.GetComponent<ZombieHealth>();
-            zh.TakeDamage(BulletDamage);
+            HealthSystem zombieHealth = other.transform.gameObject.GetComponent<HealthSystem>();
+            zombieHealth.TakeDamage(BulletDamage);
         }
     }
 

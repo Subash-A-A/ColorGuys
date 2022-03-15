@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ZombieHealth : MonoBehaviour
+public class HealthSystem : MonoBehaviour
 {
     [SerializeField] float maxHealth = 100f;
-    [SerializeField] GameObject zombie;
+    [SerializeField] GameObject target;
     [SerializeField] Slider healthBar;
     [SerializeField] float smoothValue = 5f;
 
@@ -20,7 +20,7 @@ public class ZombieHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(zombie);
+            Destroy(target);
         }
         healthBar.value = Mathf.Lerp(healthBar.value, currentHealth, smoothValue * Time.deltaTime);
     }
